@@ -64,6 +64,7 @@ sub Declarations
         ($decl{name}, $decl{type}, $decl{line}, $rest) = ($1, $2, $3, $4);
         die "illegal type [$decl{type}] [$_] $decl{name}" unless $decl{type} eq "function" or
                 $decl{type} eq "class" or
+                $decl{type} eq "interface" or
                 $decl{type} eq "macro" or
                 $decl{type} eq "member" or
                 $decl{type} eq "method" or
